@@ -8,6 +8,14 @@ const port = 8001
 app.use(express.json());
 app.use(cors());
 
+// only for test
+app.get('/',(req,res)=>{
+  res.status(200).json({
+    status:"Ok",
+    msg:"Application is working properly"
+  })
+})
+
 // Authentication Api's
 app.use('/api/auth',require("./routers/Auth/SignUp"));
 app.use('/api/auth',require("./routers/Auth/LogIn"));
