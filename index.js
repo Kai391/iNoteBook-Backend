@@ -10,6 +10,7 @@ app.use(cors());
 
 // only for test
 app.get('/',(req,res)=>{
+  console.log("Request is made on /");
   res.status(200).json({
     status:"Ok",
     msg:"Application is working properly"
